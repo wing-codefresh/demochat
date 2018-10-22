@@ -5,7 +5,7 @@ metadata:
   name: demo-chat
   labels:
     service: demo-chat
-    revision: ${{CF_REVISION}}
+    revision: {{CF_REVISION}}
 spec:
   replicas: 1
   template:
@@ -14,7 +14,7 @@ spec:
         service: demo-chat
     spec:
       containers:
-      - image: ${{BuildingDockerImage}}
+      - image: {{BuildingDockerImage}}
         name: app
         imagePullPolicy: Always
         ports:
