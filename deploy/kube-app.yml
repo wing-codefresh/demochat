@@ -13,8 +13,10 @@ spec:
       labels:
         service: demo-chat
     spec:
+      imagePullSecrets:
+        - name: {{PULL_SECRET}}
       containers:
-      - image: r.cfcr.io/dustinvanbuskirk/{{CF_REPO_OWNER}}/{{CF_REPO_NAME}}:{{CF_SHORT_REVISION}}
+      - image: r.cfcr.io/{{CF_REPO_OWNER}}/{{CF_REPO_NAME}}:{{CF_SHORT_REVISION}}
         name: app
         imagePullPolicy: Always
         ports:
