@@ -5,7 +5,7 @@ Demo for Axway
 A self-hosted chat app for small teams or big Gal by [Security Compass][seccom].
 
 Small Change
-
+Additional Change
 For commit
 
 ## Features and Stuff
